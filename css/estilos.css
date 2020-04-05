@@ -1,0 +1,245 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-size: 10px;
+}
+
+header{
+	background: black;
+
+}
+
+.log{
+	position: absolute;
+    
+    
+	top: 5px;
+	height: 52px;
+    width: 180px;
+	z-index: 100;
+	top: 10px;
+	
+}
+
+
+h1{
+	
+	background: url(../img/logo.svg);
+	background-position: center;
+	background-size: cover;
+	height: 52px;
+	width: 180px;
+	
+	font-size: 0;
+	
+
+	
+}
+
+.navbar-nav{
+	flex-direction: row;
+	padding: 1.5em 1rem;
+}
+
+.nav-link img{
+	height: 20px;
+}
+
+.nav-item{
+	margin: 0 1.5em;
+}
+
+.carrito-contador{
+	position: absolute;
+    color: red;
+    font-size: 1em;
+    right: 39px;
+    padding: 0.3em;
+    top: 12px;
+}
+
+
+
+
+
+#filtros{
+	
+	
+	width: 100%;
+	border-top: 0.5px solid white;
+	padding: 1em 0;
+}
+#filtros ul{
+	display: flex;
+	justify-content: space-evenly;
+	min-width: 320px;
+}
+#filtros ul li{
+	list-style: none;
+	
+	
+	
+	
+
+
+}
+
+#filtros ul li a{
+	font-size: 1.5em;
+	color: black;
+	font-weight: bold;
+}
+
+#productos img{
+	width: 100%;
+}
+
+.producto{
+	padding: 2em;
+	
+}
+
+.producto div{
+	background: whitesmoke;
+	
+	padding: 1em;
+}
+
+.producto div p{
+	font-size: 1.3em;
+}
+
+.producto div p span{
+	font-size: 1.2em;
+}
+.producto div button{
+	background: black;
+	color: white;
+	font-size: 1.2em;
+	border: none;
+	padding: 0.5em 2em;
+	text-transform: uppercase;
+	
+}
+
+#productos > div{
+	width: 50%;
+}
+
+
+
+
+#examplemodalCenter,#modalUsuario,#modalDetalle{
+	display: block;
+	padding: 17px;
+background: rgba(0, 0, 0, 0.5);
+}
+
+.modal-abierta {
+	overflow: hidden;
+}
+.modal{
+	overflow-x: hidden;
+	overflow-y: hidden;
+	z-index: 1072;
+	
+	
+}
+.fade{
+	transition: opacity .15s linear;
+}
+
+.items,.totales{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 1.5em;
+}
+.items span{
+	font-size: 1.2em;
+}
+
+.items a{
+	font-size: 1em;
+	color: red;
+}
+
+.totales li{
+	list-style: none;
+	font-size: 1.1em;
+	
+}
+
+.form-check-label{
+	display: flex;
+	align-items: center;
+}
+
+label{
+	width: 100%;
+	font-size: 1.3em;
+	font-weight: medium;
+}
+
+.pro{
+	height: 400px;
+}
+
+/**************MODAL USUARIO**********/
+#modalUsuario ul li {
+	font-size: 1.3em;
+	color: black;
+	font-weight: bold;
+	list-style: none;
+	
+}
+
+#modalUsuario ul li span{
+	font-size: 1em;
+	font-weight: normal;
+	
+	
+}
+
+/************MODAL DETALLE**************/
+#modalDetalle img{
+	max-width: 100%;
+	height: 350px;
+	
+}
+.detalle{
+	padding: 1em;
+}
+.detalle h2, .detalle p {
+	text-align: center;
+}
+.detalle p{
+	font-size: 1.5em;
+	color: black;
+}
+
+.saludo{
+	text-align: center;
+	
+}
+
+.numero-orden{
+	text-align: center;
+	font-size: 1.3em;
+	color: black;
+	border-bottom: 1px solid black;
+	padding: 1em 0;
+}
+
+
+@media screen and (min-width:991px){
+	.carrito-contador {
+		position: absolute;
+		color: red;
+		font-size: 1em;
+		right: 43px;
+		padding: 0.3em;
+		top: 12px;
+	}
+}
