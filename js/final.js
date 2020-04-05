@@ -504,8 +504,7 @@ function carritoProductos(id) {
 /****** ventana modal funciones*////
 function agregar (id) {
 
-	// let parent = this.parentNode.parentNode;
-	// let id = parent.getAttribute('data-id');
+
 
 	carritoProductos(id);
 	contPrecio =carritoContador().precio;
@@ -702,7 +701,7 @@ function reset () {
 	 let id=this.parentNode.getAttribute('data-id');
 
 	 let filtro=Carrito.findIndex(producto => producto.id === id);
-	 console.log(filtro);
+
 	 if(confirm('Esta seguro que desea eliminar el producto del carrito?')){
 		this.parentNode.parentNode.removeChild(this.parentNode);
 
@@ -839,14 +838,19 @@ var	inputda=d.createElement('input');
 	inputda.setAttribute('placeholder', 'Ingrese Fecha de Entrega');
 var	inputch=d.createElement('input');
 	inputch.className='form-check-input';
-	inputch.setAttribute('type','checkbox');
+	inputch.className +=' ef';
+	inputch.setAttribute('type','radio');
+	inputch.setAttribute('value','option1');
+	inputch.setAttribute('name','pago');
 var divg9=d.createElement('div');
 	divg9.className='form-group';
 	
 var	inputch1=d.createElement('input');
 	inputch1.className='form-check-input';
-	inputch1.setAttribute('type','checkbox');
-	inputch1.className='ef';
+	inputch1.setAttribute('type','radio');
+	inputch1.setAttribute('value','option2');
+	inputch1.setAttribute('name','pago');
+	inputch1.className +=' tj';
 var divg8=d.createElement('div');
 	divg8.className='form-group';
 var select=d.createElement('select');
@@ -925,10 +929,10 @@ var select=d.createElement('select');
 	form.appendChild(divg9);
 	divg9.appendChild(divg5);
 	divg5.appendChild(label5);
-	label5.appendChild(inputch);
+	divg5.appendChild(inputch);
 	divg9.appendChild(divg6);
 	divg6.appendChild(label6);
-	label6.appendChild(inputch1);
+	divg6.appendChild(inputch1);
 	form.appendChild(divg7);
 	divg7.appendChild(label7);
 	label7.appendChild(divg8);
@@ -939,16 +943,23 @@ var select=d.createElement('select');
 	select.appendChild(option3);
 	form.appendChild(button4);
 
-	
-	$(document).ready(function (){
-	$('.ef').click(function(){
-		if( $('.ef').is(':checked') ){
-			$('select').removeAttr('disabled');
-		};
 
-});
-	})	
-		
+
+	 let tj=d.getElementsByClassName('tj');
+
+	 let ef=d.getElementsByClassName('ef');
+
+	 let sel= d.querySelector('.tr');
+
+
+	 ef[0].addEventListener('click',function(){
+	 	sel.setAttribute('disabled','disabeld');
+	 });
+	 tj[0].addEventListener('click',function(){
+	 	sel.removeAttribute('disabled');
+	 });
+
+
 
 }
 
